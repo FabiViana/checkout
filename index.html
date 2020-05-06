@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="utf-8">   
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Produto Checkout</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container d-flex justify-content-between">
+        <a href="https://checkout.reclameaqui.com.br/" class="navbar-brand d-flex align-items-center">
+          <img class="ra-logo"src="https://www.reclameaqui.com.br/_nuxt/img/559b7e9.svg">
+        </a>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between">
+                <div>
+                  <p>Resumo</p>
+                </div>
+                <span class="about">Sobre o Produto</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <div>
+                  <p>Produto</p>
+                </div>
+                <span><img src="https://checkout.reclameaqui.com.br/products/ra-verified.svg"><br></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <div>
+                  <p>Valor</p>
+                </div>
+                <span class="price" id="price">R$ 19,90</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="wrapper-form col-md-8 order-md-1">
+            <div  class="container col-md-3 col-md-6 col-md-3">
+              <div class="title-form">
+                <h2>Forma de pagamento</h2>
+                <div class="card-img" >
+                  <img src="assets/fakeCard.png" alt="">
+                </div>
+              </div>
+              <form class="needs-validation" method="post" novalidate="">
+              <div class="row">
+                <div class="col-md-12  mb-3">
+                  <label for="cc-number">Número do cartão</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12  mb-3">
+                  <label>Nome do títular<br><small class="text-muted">Como impresso no cartão</small></label>
+                  <input type="text" class="form-control" id="card-name" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cc-expiration">Validade do cartão</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="MM/AA" required="">
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cc-cvv">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="cc-number">CNPJ do titular do cartão</label>
+                  <input type="text" class="form-control" id="cpf" placeholder="00000000000000" required="" title=" xxx.xxx.xxx-xx">
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <p>Endereço de cobrança</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="zip">CEP</label>
+                  <input type="text" class="form-control" id="zipcode" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Zip code required.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="address">Rua</label>
+                  <input type="text" class="form-control" id="street" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label>Número</label>
+                  <input type="text" class="form-control" id="address-number"  required="">
+                  <div class="invalid-feedback">
+                    Number Address
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cc-cvv">Complemento</label>
+                  <input type="text" class="form-control" id="complement" placeholder="" required="">
+                  <div class="invalid-feedback">  
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="cc-expiration">Cidade</label>
+                  <input type="text" class="form-control" id="city" required="">
+                  <div class="invalid-feedback">
+                  </div>
+                </div>
+                <div class="col-md-6  mb-3">
+                  <label for="cc-cvv">Estado</label>
+                  <input type="text" class="form-control" id="state" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-4">
+
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="zip">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    name.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="email">Email <span class="text-muted"></span></label>
+                  <input type="email" class="form-control" id="email">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="telefone">Telefone</label>
+                  <input type="text" class="form-control" id="phone-number" placeholder="5500000000000">
+                  <div class="invalid-feedback">
+                    phone number
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <button class="btn-buy" id="buy" type="submit">Finalizar Compra</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+   </body>
+</html>
