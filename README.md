@@ -1,2 +1,2 @@
 # checkout
-Created valina checkout
+Created vanila checkout
